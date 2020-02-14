@@ -1,6 +1,8 @@
 #include <iostream>
 
 int main() {
-    std::cout << "Transformation matrix of very cool though stupid Ido!" << std::endl;
+    int a;
+    std::cin >> a;
+    std::cout << "Transformation matrix of very cool though stupid Ido! " << a << std::endl;
     return 0;
 }
