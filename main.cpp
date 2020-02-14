@@ -6,7 +6,7 @@ int randomFunc(int a){
 
 int main() {
     std::cout << " ^_^ " << std::endl;
-    std::cout << "Transformation matrix of very cool though stupid Ido?!!??!?!" << std::endl;
+    std::cout << "Everything is awesome" << std::endl;
     return 0;
 }
 
