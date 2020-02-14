@@ -12,7 +12,7 @@ int main() {
 
 void ido(int a){
     if(a>0){
-        std::cout << " ^_^  (:  (;  *_*  (-:  (<:  O_O" << std::endl;
+        std::cout << "  (<:|>  " << std::endl;
     }
     std::cout << " ido " << std::endl;
 }
