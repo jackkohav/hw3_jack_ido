@@ -1,6 +1,7 @@
 #include <iostream>
+using namespace std;
 
 int main() {
-    std::cout << "Transformation matrix of very cool though stupid Ido!" << std::endl;
+    cout << "High-five against Yahav" << endl;
     return 0;
 }
