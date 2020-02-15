@@ -18,7 +18,10 @@ class Participant
 // relevant private members can be defined here, if necessary.
 
 public :
-
+    char* state;
+    char* song;
+    int timeLength;
+    char* singer;
 // need to define here possibly c'tr and d'tr and ONLY methods that
 // are mentioned and demonstrated in the test example that has been published.
 // NO OTHER METHODS SHOULD APPEAR HERE.

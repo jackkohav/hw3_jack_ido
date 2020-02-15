@@ -12,6 +12,14 @@ class NoPrice
 // ---------------------------------------------
 class Seat
 {
+    int row_number;
+    int chair_number;
+    int base_price;
+public:
+    Seat(int row, int chair, int base):
+        row_number(row), chair_number(chair), base_price(base){}
+    virtual int price() const = 0;
+
 };
 
 // ---------------------------------------------
