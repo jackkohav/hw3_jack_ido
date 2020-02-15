@@ -4,8 +4,8 @@
 #include <vector>
 using namespace std;
 
-template<class T, class Predicate>
-int numberOfPairs(const T& container, Predicate pred){
+template<typename Iterator, typename Predicate>
+int numberOfPairs(Iterator begin, Iterator end, Predicate pred){
 
 }
 
