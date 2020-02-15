@@ -1,7 +1,6 @@
 //
 // Created by jack on 15/02/2020.
 //
-#include <iostream>
 #include <vector>
 using namespace std;
 
@@ -19,9 +18,17 @@ int choose(unsigned const int n, unsigned const int k){
     if(k > n) return 0;
     return fact(n)/(fact(k)*fact(n-k));
 }
+template<typename Iterator>
+class Monotone{
+    public:
+    bool operator()(Iterator i, Iterator j){
+        return (i < j)&&(*i <= *j);
+    }
+};
 
-bool monotone();
-
-bool isSorted(vector<int> v){
-    return true;
+bool isSorted(const vector<int>& v){
+    Monotone<int> monotone();
+    int size = v.size();
+    int number_of_pairs = numberOfPairs(v, monotone);
+    return number_of_pairs == choose(size, 2);
 }
