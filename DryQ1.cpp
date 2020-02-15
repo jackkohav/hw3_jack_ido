@@ -20,7 +20,7 @@ int numberOfPairs(Iterator begin, Iterator end, Predicate pred){
 
 int fact(unsigned const int n){
     if(n == 0) return 1;
-    return fact(n-1);
+    return n*fact(n-1);
 }
 
 int choose(unsigned const int n, unsigned const int k){
@@ -45,6 +45,6 @@ bool isSorted(const vector<int>& v){
     return number_of_pairs == choose(size, 2);
 }
 int main(){
-    vector<int> v = {1,2,3,4,5,6};
+    vector<int> v = {1,2,3,8,5,6};
     std::cout << isSorted(v) << std::endl;
 }
