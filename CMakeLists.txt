@@ -3,4 +3,4 @@ project(hw3_jack_ido)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(hw3_jack_ido main.cpp)
+add_executable(hw3_jack_ido main.cpp DryQ1.cpp test1.cpp test2.cpp)

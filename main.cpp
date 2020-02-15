@@ -1,18 +1,31 @@
 #include <iostream>
-
-int randomFunc(int a){
-    return a - 3*a*a + 9;
-}
+class Base
+{
+    void method(){
+        std::cout << "from Base" << std::endl;
+    }
+public:
+    virtual ~Base(){
+        method();
+    }
+    void baseMethod(){
+        method();
+    }
+};
+class A: public Base
+{
+    void method(){
+        std::cout << "from A" << std::endl;
+    }
+public:
+    ~A() override {
+        method();
+    }
+};
 
 int main() {
-    std::cout << " (O_O) (O_0) (0_0) (o_o) (o_O)  " << std::endl;
-    std::cout << "Transformation matrix of very cool though stupid Ido!!!!" << std::endl;
+    Base* base = new A();
+    base->baseMethod();
+    delete base;
     return 0;
-}
-
-void ido(int a){
-    if(a>0){
-        std::cout << "  (<:|>  " << std::endl;
-    }
-    std::cout << " ido " << std::endl;
 }
