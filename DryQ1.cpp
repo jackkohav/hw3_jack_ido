@@ -29,19 +29,12 @@ int choose(unsigned const int n, unsigned const int k){
 }
 class Monotone{
     vector<int> v;
-    public:
+public:
     explicit Monotone(const vector<int>& vec): v(vector<int>(vec)){}
     bool operator()(const int& i, const int& j){
-        if(i > j) return false;
         vector<int>::iterator i_place = find(v.begin(), v.end(), i);
         vector<int>::iterator j_place = find(v.begin(), v.end(), j);
-        if(i_place > j_place) return false;
-        if(i == j){
-            for(vector<int>::iterator k = i_place; k != j_place; ++k){
-                if(*k != i) return false;
-            }
-        }
-        return true;
+        return (i < j) && (i_place < j_place);
     }
 };
 
@@ -52,6 +45,6 @@ bool isSorted(const vector<int>& v){
     return number_of_pairs == choose(size, 2);
 }
 int main(){
-    vector<int> v = {1,2,3,4,5,6,6,5};
+    vector<int> v = {1,2,3,4};
     std::cout << isSorted(v) << std::endl;
 }

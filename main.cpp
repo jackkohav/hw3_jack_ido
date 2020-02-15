@@ -18,7 +18,7 @@ class A: public Base
         std::cout << "from A" << std::endl;
     }
 public:
-    ~A() override {
+    ~A() override{
         method();
     }
 };
