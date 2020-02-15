@@ -36,6 +36,6 @@ class Monotone{
 bool isSorted(const vector<int>& v){
     Monotone<int> monotone();
     int size = v.size();
-    int number_of_pairs = numberOfPairs(v, monotone);
+    int number_of_pairs = numberOfPairs(v.begin(), v.end(), monotone);
     return number_of_pairs == choose(size, 2);
 }
