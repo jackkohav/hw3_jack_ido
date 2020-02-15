@@ -32,9 +32,16 @@ class Monotone{
     public:
     explicit Monotone(const vector<int>& vec): v(vector<int>(vec)){}
     bool operator()(const int& i, const int& j){
-        auto i_place = find(v.begin(), v.end(), i);
-        auto j_place = find(v.begin(), v.end(), j);
-        return (i < j)&&(i_place <= j_place);
+        if(i > j) return false;
+        vector<int>::iterator i_place = find(v.begin(), v.end(), i);
+        vector<int>::iterator j_place = find(v.begin(), v.end(), j);
+        if(i_place > j_place) return false;
+        if(i == j){
+            for(vector<int>::iterator k = i_place; k != j_place; ++k){
+                if(*k != i) return false;
+            }
+        }
+        return true;
     }
 };
 
@@ -45,6 +52,6 @@ bool isSorted(const vector<int>& v){
     return number_of_pairs == choose(size, 2);
 }
 int main(){
-    vector<int> v = {1,2,3,8,5,6};
+    vector<int> v = {1,2,3,4,5,6,6,5};
     std::cout << isSorted(v) << std::endl;
 }
