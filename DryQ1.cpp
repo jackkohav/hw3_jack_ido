@@ -6,7 +6,14 @@ using namespace std;
 
 template<typename Iterator, typename Predicate>
 int numberOfPairs(Iterator begin, Iterator end, Predicate pred){
-
+    int counter = 0; //counts the pairs that satisfy the condition
+    for(Iterator i = begin; i != end; ++i){
+        for(Iterator j = begin; j != i; ++j){  //iterating over the elements (j) before the current element (i)
+            if(pred(i, j) || pred(j, i))  //the two elements satisfy the condition
+                counter++;
+        }
+    }
+    return counter;
 }
 
 int fact(unsigned const int n){
