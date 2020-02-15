@@ -5,8 +5,8 @@ int randomFunc(int a){
 }
 
 int main() {
-    std::cout << " ^_^ " << std::endl;
-    std::cout << "Everything is awesome" << std::endl;
+    std::cout << " (O_O) (O_0) (0_0) (o_o) (o_O)  " << std::endl;
+    std::cout << "Transformation matrix of very cool though stupid Ido!!!!" << std::endl;
     return 0;
 }
 
