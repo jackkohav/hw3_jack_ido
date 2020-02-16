@@ -15,6 +15,7 @@ class Seat
     int line_number;
     int chair_number;
     int base_price;
+    static const int
 public:
     Seat(int line, int chair, int base):
         line_number(line), chair_number(chair), base_price(base){}
